@@ -28,9 +28,40 @@ app.post("/depo", function (req, res) {
   let saint = req.body.saint;
   let type = req.body.type;
   let content = req.body.content;
+  let reference = req.body.reference;
   connection.query(
-    "INSERT INTO depo(Saint,Type,Content) VALUES(?,?,?)",
-    [saint, type, content],
+    "INSERT INTO depo(Saint,Type,Reference,Content) VALUES(?,?,?,?)",
+    [saint, type, reference, content],
+    function (error, results, fields) {
+      if (error) {
+        console.log(error);
+      } else {
+        res.send("POSTED");
+      }
+    }
+  );
+});
+app.delete("/delete", function (req, res, next) {
+  let id = req.body.content;
+  connection.query(
+    "DELETE FROM depo WHERE Content = ?",
+    [id],
+    function (error, rows, fields) {
+      if (!error) {
+      } else {
+        console.log("Error in deleting");
+      }
+    }
+  );
+});
+app.post("/public", function (req, res) {
+  let saint = req.body.Saint;
+  let type = req.body.Type;
+  let content = req.body.Content;
+  let reference = req.body.Reference;
+  connection.query(
+    "INSERT INTO public(Saint,Type,Reference,Content) VALUES(?,?,?,?)",
+    [saint, type, content, reference],
     function (error, results, fields) {
       if (error) {
         console.log(error);
