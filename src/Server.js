@@ -71,3 +71,9 @@ app.post("/public", function (req, res) {
     }
   );
 });
+
+app.get("/public", function (req, res, next) {
+  connection.query("SELECT * FROM public", function (error, results, fields) {
+    res.send(results);
+  });
+});

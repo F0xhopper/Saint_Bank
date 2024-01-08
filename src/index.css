@@ -28,3 +28,53 @@ code {
   margin: 10px;
   float: left;
 }
+.publicContainer {
+  width: 1100px;
+  border: 1px solid black;
+  height: 800px;
+}
+.depositContainer {
+  width: 1100px;
+  border: 1px solid black;
+  height: 800px;
+}
+.topContainer {
+  height: 200px;
+  width: 2000px;
+  float: left;
+}
+.bottomContainer {
+  height: 200px;
+  width: 2000px;
+  float: left;
+}
+.imageContainer {
+  float: left;
+}
+.interactiveContainer {
+  float: left;
+}
+.title {
+  font-size: 59px;
+}
+.titleContainer {
+  float: left;
+}
+.adminLoginContainer {
+  float: left;
+  width: 200px;
+}
+.App {
+  border: 1px solid black;
+  width: 1600px;
+  height: 1100px;
+  margin: auto;
+}
+.usernameInputContainer,
+.passwordInputContainer {
+  margin: 10px;
+  float: left;
+}
+.image {
+  width: 480px;
+}

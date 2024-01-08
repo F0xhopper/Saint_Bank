@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Deposit = () => {
+const Deposit = (props) => {
   const [saintInput, setSaintInput] = useState();
   const [typeInput, setTypeInput] = useState();
   const [referenceInput, setReferenceInput] = useState();
@@ -21,6 +21,13 @@ const Deposit = () => {
   }
   return (
     <div>
+      <button
+        onClick={() => {
+          props.setDepositing(false);
+        }}
+      >
+        Back
+      </button>
       <input
         placeholder="Saint"
         onChange={(e) => {
@@ -32,8 +39,7 @@ const Deposit = () => {
           setTypeInput(e.target.value);
         }}
       >
-        <option>Quote</option>
-        <option>Work</option>
+        <option>Work</option> <option>Quote</option>
         <option>Story</option>
       </select>
       {typeInput !== "Quote" ? (

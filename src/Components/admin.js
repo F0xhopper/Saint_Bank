@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-const AdminFacility = () => {
+const AdminFacility = (props) => {
   const [depositDisplay, setDepositDisplay] = useState();
 
   function getDeposited() {
@@ -41,12 +41,15 @@ const AdminFacility = () => {
     getDeposited();
   });
   return (
-    <div>
+    <div className="depositContainer">
       {" "}
-      <div>
-        <input placeholder="Username"></input>
-        <input placeholder="Password"></input>
-      </div>
+      <button
+        onClick={() => {
+          props.setLoggedIn(false);
+        }}
+      >
+        Log Out
+      </button>
       <div className="workCollumn">
         {" "}
         <h1>work</h1>
@@ -90,7 +93,22 @@ const AdminFacility = () => {
                     <h1 className="saintTypeContentH1">{single.Saint}</h1>
                     <h1 className="saintTypeContentH1">{single.Reference}</h1>
                     <h1 className="saintTypeContentH1">{single.Content}</h1>
-                    <button>✓</button> <button>✖</button>
+                    <button
+                      value={single}
+                      onClick={(e) => {
+                        approve(single);
+                      }}
+                    >
+                      ✓
+                    </button>{" "}
+                    <button
+                      value={single.Content}
+                      onClick={(e) => {
+                        disapprove(e.target.value);
+                      }}
+                    >
+                      ✖
+                    </button>
                   </div>
                 );
               }
@@ -107,7 +125,22 @@ const AdminFacility = () => {
                   <div className="saintTypeContentContainer">
                     <h1 className="saintTypeContentH1">{single.Saint}</h1>
                     <h1 className="saintTypeContentH1">{single.Content}</h1>
-                    <button>✓</button> <button>✖</button>
+                    <button
+                      value={single}
+                      onClick={(e) => {
+                        approve(single);
+                      }}
+                    >
+                      ✓
+                    </button>{" "}
+                    <button
+                      value={single.Content}
+                      onClick={(e) => {
+                        disapprove(e.target.value);
+                      }}
+                    >
+                      ✖
+                    </button>
                   </div>
                 );
               }
