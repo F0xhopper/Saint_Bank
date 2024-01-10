@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Deposit = (props) => {
   const [saintInput, setSaintInput] = useState();
-  const [typeInput, setTypeInput] = useState();
+  const [typeInput, setTypeInput] = useState("Work");
   const [referenceInput, setReferenceInput] = useState();
   const [contentInput, setContentInput] = useState();
   function post() {
@@ -18,9 +18,10 @@ const Deposit = (props) => {
         content: contentInput,
       }),
     });
+    props.setDepositing(false);
   }
   return (
-    <div>
+    <div className="depositContainer">
       <button
         onClick={() => {
           props.setDepositing(false);

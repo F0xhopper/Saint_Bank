@@ -1,4 +1,5 @@
 import saintImage from "./Images/5ab2e274ef891dbb02783b483c8789d1.jpg";
+import title from "./Images/ssssssada.png";
 import { useEffect, useState } from "react";
 import Deposit from "./Components/deposit.js";
 import AdminFacility from "./Components/admin.js";
@@ -14,7 +15,7 @@ function App() {
         <div className="topContainer">
           <Login setLoggedIn={setLoggedIn} loggedIn={loggedIn} />
           <div className="titleContainer">
-            <h1 className="title">The Soul Bank</h1>
+            <img className="titleImage" src={title}></img>
           </div>
         </div>
         <div className="bottomContainer">

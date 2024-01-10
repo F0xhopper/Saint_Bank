@@ -5,33 +5,72 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(255, 255, 255);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.saintTypeContentH1 {
-  float: left;
+.individualArticleTitle {
   margin: 3px;
   font-size: 19px;
 }
-.saintTypeContentContainer {
+.individualArticleContent {
+  margin: 3px;
+  font-size: 16px;
+}
+.worksCollumnTitleContainer,
+.quotesCollumnTitleContainer,
+.storysCollumnTitleContainer {
+  width: 100px;
+  margin: auto;
+  margin-top: 0px;
+}
+.individualArticleContainer {
   float: inline-start;
   margin: 10px;
-  outline: 1px solid black;
+  width: 310px;
+  cursor: pointer;
 }
 .storyCollumn,
 .workCollumn,
 .quoteCollumn {
-  width: 270px;
+  width: 370px;
   margin: 10px;
   float: left;
 }
-.publicContainer {
-  width: 1100px;
+.workArticleContainer,
+.quoteArticleContainer,
+.storyArticleContainer {
+  overflow-x: scroll;
+  width: 350px;
+  height: 610px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+.allCollumnContainer {
   border: 1px solid black;
-  height: 800px;
+  width: 1190px;
+  height: 700px;
+}
+.publicContainer {
+  width: 1200px;
+  border: 1px solid black;
+  height: 850px;
+}
+.imageContainer {
+  float: left;
 }
 .depositContainer {
   width: 1100px;
@@ -66,8 +105,8 @@ code {
 }
 .App {
   border: 1px solid black;
-  width: 1600px;
-  height: 1100px;
+  width: 1700px;
+  height: 1080px;
   margin: auto;
 }
 .usernameInputContainer,
