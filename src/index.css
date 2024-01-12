@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(255, 255, 255);
@@ -14,12 +12,13 @@ code {
 }
 .individualArticleTitle {
   margin: 3px;
-  font-size: 19px;
+  font-size: 18px;
 }
 .individualArticleContent {
   margin: 3px;
-  font-size: 16px;
+  font-size: 14px;
 }
+
 .worksCollumnTitleContainer,
 .quotesCollumnTitleContainer,
 .storysCollumnTitleContainer {
@@ -27,11 +26,53 @@ code {
   margin: auto;
   margin-top: 0px;
 }
+.articleInViewContentContainer {
+  width: 1120px;
+  height: 700px;
+  overflow: scroll;
+}
+
 .individualArticleContainer {
   float: inline-start;
   margin: 10px;
   width: 310px;
+  height: max-content;
   cursor: pointer;
+}
+.individualArticleContainer:hover {
+  filter: drop-shadow(1px 1px 10px #818181);
+}
+.articleInViewButton {
+  margin: 10px;
+  cursor: pointer;
+}
+.articleInViewButton:hover {
+  filter: drop-shadow(1px 1px 10px #818181);
+}
+.depositBackButton {
+  margin: 10px;
+  cursor: pointer;
+}
+.depositBackButton:hover {
+  filter: drop-shadow(1px 1px 10px #818181);
+}
+.articleInViewContent {
+  font-size: 20px;
+}
+.depositButton {
+  cursor: pointer;
+}
+.depositInsideContainer {
+  margin: 10px;
+}
+.depositButton:hover {
+  filter: drop-shadow(1px 1px 10px #818181);
+}
+.randomButton {
+  cursor: pointer;
+}
+.randomButton:hover {
+  filter: drop-shadow(1px 1px 10px #818181);
 }
 .storyCollumn,
 .workCollumn,
@@ -60,9 +101,30 @@ code {
 }
 
 .allCollumnContainer {
-  border: 1px solid black;
+  float: left;
   width: 1190px;
   height: 700px;
+}
+.articleInViewDisplayArticleContainer {
+  margin: 50px;
+}
+.searchBar {
+  float: left;
+  width: 300px;
+  height: 50px;
+  margin: 10px;
+  width: 400px;
+  height: 30px;
+}
+.depositButtonContainer {
+  float: right;
+  margin: 10px;
+  width: 100px;
+}
+.randomButtonContainer {
+  float: left;
+  width: 300px;
+  margin: 10px;
 }
 .publicContainer {
   width: 1200px;
@@ -73,9 +135,9 @@ code {
   float: left;
 }
 .depositContainer {
-  width: 1100px;
+  width: 1200px;
   border: 1px solid black;
-  height: 800px;
+  height: 850px;
 }
 .topContainer {
   height: 200px;
@@ -100,8 +162,12 @@ code {
   float: left;
 }
 .adminLoginContainer {
+  filter: drop-shadow(1px 1px 10px #818181);
   float: left;
+  margin: 10px;
   width: 200px;
+  height: 120px;
+  margin-right: 300px;
 }
 .App {
   border: 1px solid black;
@@ -109,11 +175,15 @@ code {
   height: 1080px;
   margin: auto;
 }
+.loginButton {
+  margin: 10px;
+  width: 170px;
+}
 .usernameInputContainer,
 .passwordInputContainer {
   margin: 10px;
   float: left;
 }
 .image {
-  width: 480px;
+  width: 460px;
 }

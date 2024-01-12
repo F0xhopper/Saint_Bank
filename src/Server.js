@@ -59,9 +59,11 @@ app.post("/public", function (req, res) {
   let type = req.body.Type;
   let content = req.body.Content;
   let reference = req.body.Reference;
+
+  console.log(saint, type, content, reference);
   connection.query(
     "INSERT INTO public(Saint,Type,Reference,Content) VALUES(?,?,?,?)",
-    [saint, type, content, reference],
+    [saint, type, reference, content],
     function (error, results, fields) {
       if (error) {
         console.log(error);

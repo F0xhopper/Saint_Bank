@@ -6,6 +6,8 @@ const Deposit = (props) => {
   const [referenceInput, setReferenceInput] = useState();
   const [contentInput, setContentInput] = useState();
   function post() {
+    let changedRefernce = null;
+
     fetch("http://localhost:3001/depo", {
       method: "post",
       headers: {
@@ -18,46 +20,61 @@ const Deposit = (props) => {
         content: contentInput,
       }),
     });
-    props.setDepositing(false);
+    // props.setDepositing(false);
+    setReferenceInput("");
+    setSaintInput("");
+    setContentInput("");
   }
   return (
     <div className="depositContainer">
-      <button
+      <div
+        className="depositBackButton"
         onClick={() => {
           props.setDepositing(false);
         }}
       >
         Back
-      </button>
-      <input
-        placeholder="Saint"
-        onChange={(e) => {
-          setSaintInput(e.target.value);
-        }}
-      ></input>
-      <select
-        onChange={(e) => {
-          setTypeInput(e.target.value);
-        }}
-      >
-        <option>Work</option> <option>Quote</option>
-        <option>Story</option>
-      </select>
-      {typeInput !== "Quote" ? (
+      </div>
+      <div className="depositInsideContainer">
         <input
-          placeholder="Reference"
+          className="depositSaintInput"
+          value={saintInput}
+          placeholder="Saint"
           onChange={(e) => {
-            setReferenceInput(e.target.value);
+            setSaintInput(e.target.value);
           }}
         ></input>
-      ) : null}
-      <textarea
-        placeholder="Content"
-        onChange={(e) => {
-          setContentInput(e.target.value);
-        }}
-      ></textarea>
-      <button onClick={post}>Deposit</button>
+        <select
+          className="depositSelector"
+          onChange={(e) => {
+            setTypeInput(e.target.value);
+          }}
+        >
+          <option>Work</option> <option>Quote</option>
+          <option>Story</option>
+        </select>
+        {typeInput !== "Quote" ? (
+          <input
+            className="depositReferenceInput"
+            value={referenceInput}
+            placeholder="Reference"
+            onChange={(e) => {
+              setReferenceInput(e.target.value);
+            }}
+          ></input>
+        ) : null}
+        <textarea
+          className="depositContentInput"
+          value={contentInput}
+          placeholder="Content"
+          onChange={(e) => {
+            setContentInput(e.target.value);
+          }}
+        ></textarea>
+        <button className="depositDepositButton" onClick={post}>
+          Deposit
+        </button>
+      </div>
     </div>
   );
 };

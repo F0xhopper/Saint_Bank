@@ -129,6 +129,7 @@ const AdminFacility = (props) => {
                       value={single}
                       onClick={(e) => {
                         approve(single);
+                        console.log(single);
                       }}
                     >
                       ✓
