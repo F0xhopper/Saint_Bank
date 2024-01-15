@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "password",
-  database: "saint_deposit",
+  database: "soul",
 });
 connection.connect();
 

@@ -1,5 +1,5 @@
-import saintImage from "./Images/5ab2e274ef891dbb02783b483c8789d1.jpg";
-import title from "./Images/ssssssada.png";
+import saintImage from "./Images/tumblr_nj7pdo0cWa1sknvnko2_r1_1280.jpg";
+import title from "./Images/New Project (7).png";
 import { useEffect, useState } from "react";
 import Deposit from "./Components/deposit.js";
 import AdminFacility from "./Components/admin.js";

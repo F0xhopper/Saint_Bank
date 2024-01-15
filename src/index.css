@@ -39,12 +39,22 @@ code {
   height: max-content;
   cursor: pointer;
 }
+.individualArticleContainerAdmin {
+  float: inline-start;
+  margin: 10px;
+  width: 310px;
+  height: max-content;
+  cursor: pointer;
+}
 .individualArticleContainer:hover {
   filter: drop-shadow(1px 1px 10px #818181);
 }
 .articleInViewButton {
   margin: 10px;
   cursor: pointer;
+}
+.saintDropdown {
+  height: 29px;
 }
 .articleInViewButton:hover {
   filter: drop-shadow(1px 1px 10px #818181);
@@ -63,7 +73,9 @@ code {
   cursor: pointer;
 }
 .depositInsideContainer {
-  margin: 10px;
+  margin: 50px;
+  width: 940px;
+  height: 700px;
 }
 .depositButton:hover {
   filter: drop-shadow(1px 1px 10px #818181);
@@ -74,12 +86,85 @@ code {
 .randomButton:hover {
   filter: drop-shadow(1px 1px 10px #818181);
 }
+.depositSaintInput {
+  width: 420px;
+  font-size: 18px;
+
+  height: 35px;
+}
+.depositSaintInputContainer {
+  margin: 10px;
+  float: left;
+  width: max-content;
+  height: max-content;
+  margin-bottom: 20px;
+  height: 35px;
+}
+.depositReferenceInputContainer {
+  margin: 10px;
+  width: max-content;
+  height: max-content;
+
+  float: left;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  height: 35px;
+}
+.depositSelectorContainer {
+  width: max-content;
+  height: max-content;
+  margin-left: 60px;
+  float: left;
+}
+.depositSelector {
+  width: max-content;
+  font-size: 26px;
+  font-family: "Times New Roman", Times, serif;
+}
+.depositDepositButtonContainer {
+  width: max-content;
+  height: max-content;
+  float: right;
+  font-size: 32px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.depositDepositButtonContainer:hover {
+  filter: drop-shadow(1px 1px 10px #818181);
+}
+.depositContentInputContainer {
+  margin: 10px;
+  width: max-content;
+  height: max-content;
+  float: left;
+}
+.depositReferenceInput {
+  width: 420px;
+  height: 35px;
+  font-size: 18px;
+  float: left;
+}
+.depositContentInput {
+  width: 900px;
+  resize: none;
+  font-size: 19px;
+
+  height: 550px;
+}
 .storyCollumn,
 .workCollumn,
 .quoteCollumn {
   width: 370px;
   margin: 10px;
   float: left;
+}
+.individualApproveButton {
+  background-color: white;
+  cursor: pointer;
+}
+.individualApproveButton:hover {
+  filter: drop-shadow(1px 1px 10px #818181);
 }
 .workArticleContainer,
 .quoteArticleContainer,
@@ -161,8 +246,10 @@ code {
 .titleContainer {
   float: left;
 }
+.titleImage {
+  width: 1100px;
+}
 .adminLoginContainer {
-  filter: drop-shadow(1px 1px 10px #818181);
   float: left;
   margin: 10px;
   width: 200px;
@@ -178,6 +265,12 @@ code {
 .loginButton {
   margin: 10px;
   width: 170px;
+  margin-left: 70px;
+  cursor: pointer;
+  float: left;
+}
+.loginButton:hover {
+  filter: drop-shadow(1px 1px 10px #818181);
 }
 .usernameInputContainer,
 .passwordInputContainer {

@@ -34,16 +34,8 @@ const Deposit = (props) => {
         }}
       >
         Back
-      </div>
-      <div className="depositInsideContainer">
-        <input
-          className="depositSaintInput"
-          value={saintInput}
-          placeholder="Saint"
-          onChange={(e) => {
-            setSaintInput(e.target.value);
-          }}
-        ></input>
+      </div>{" "}
+      <div className="depositSelectorContainer">
         <select
           className="depositSelector"
           onChange={(e) => {
@@ -53,27 +45,45 @@ const Deposit = (props) => {
           <option>Work</option> <option>Quote</option>
           <option>Story</option>
         </select>
-        {typeInput !== "Quote" ? (
+      </div>
+      <div className="depositInsideContainer">
+        <div className="depositSaintInputContainer">
           <input
-            className="depositReferenceInput"
-            value={referenceInput}
-            placeholder="Reference"
+            className="depositSaintInput"
+            value={saintInput}
+            placeholder="Saint"
             onChange={(e) => {
-              setReferenceInput(e.target.value);
+              setSaintInput(e.target.value);
             }}
           ></input>
-        ) : null}
-        <textarea
-          className="depositContentInput"
-          value={contentInput}
-          placeholder="Content"
-          onChange={(e) => {
-            setContentInput(e.target.value);
-          }}
-        ></textarea>
-        <button className="depositDepositButton" onClick={post}>
-          Deposit
-        </button>
+        </div>{" "}
+        {typeInput !== "Quote" ? (
+          <div className="depositReferenceInputContainer">
+            <input
+              className="depositReferenceInput"
+              value={referenceInput}
+              placeholder="Reference"
+              onChange={(e) => {
+                setReferenceInput(e.target.value);
+              }}
+            ></input>
+          </div>
+        ) : null}{" "}
+        <div className="depositContentInputContainer">
+          <textarea
+            className="depositContentInput"
+            value={contentInput}
+            placeholder="Content"
+            onChange={(e) => {
+              setContentInput(e.target.value);
+            }}
+          ></textarea>
+        </div>
+        <div className="depositDepositButtonContainer">
+          <div className="depositDepositButton" onClick={post}>
+            Deposit
+          </div>
+        </div>
       </div>
     </div>
   );

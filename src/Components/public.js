@@ -52,10 +52,9 @@ const Public = (props) => {
               onChange={(e) => {
                 setSearchInput(e.target.value);
               }}
-            ></input>
-          </div>
-          <div className="saintDropdownContainer">
+            ></input>{" "}
             <select
+              className="saintDropdown"
               onChange={(e) => {
                 if (e.target.value !== "All saint's") {
                   setSearchInput(e.target.value);

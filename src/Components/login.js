@@ -31,9 +31,9 @@ const Login = (props) => {
           }}
         ></input>
       </div>
-      <button className="loginButton" onClick={login}>
+      <div className="loginButton" onClick={login}>
         Login
-      </button>
+      </div>
     </div>
   );
 };

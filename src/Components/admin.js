@@ -43,110 +43,137 @@ const AdminFacility = (props) => {
   return (
     <div className="depositContainer">
       {" "}
-      <button
+      <div
+        className="depositBackButton"
         onClick={() => {
           props.setLoggedIn(false);
         }}
       >
-        Log Out
-      </button>
-      <div className="workCollumn">
-        {" "}
-        <h1>work</h1>
-        {depositDisplay !== undefined
-          ? depositDisplay.map((single) => {
-              if (single.Type == "Work") {
-                return (
-                  <div className="saintTypeContentContainer">
-                    <h1 className="saintTypeContentH1">{single.Saint}</h1>
-                    <h1 className="saintTypeContentH1">{single.Reference}</h1>
-                    <h1 className="saintTypeContentH1">{single.Content}</h1>
-                    <button
-                      value={single}
-                      onClick={(e) => {
-                        approve(single);
-                      }}
-                    >
-                      ✓
-                    </button>{" "}
-                    <button
-                      value={single.Content}
-                      onClick={(e) => {
-                        disapprove(e.target.value);
-                      }}
-                    >
-                      ✖
-                    </button>
-                  </div>
-                );
-              }
-            })
-          : null}
-      </div>
-      <div className="storyCollumn">
-        <h1>Story</h1>{" "}
-        {depositDisplay !== undefined
-          ? depositDisplay.map((single) => {
-              if (single.Type == "Story") {
-                return (
-                  <div className="saintTypeContentContainer">
-                    <h1 className="saintTypeContentH1">{single.Saint}</h1>
-                    <h1 className="saintTypeContentH1">{single.Reference}</h1>
-                    <h1 className="saintTypeContentH1">{single.Content}</h1>
-                    <button
-                      value={single}
-                      onClick={(e) => {
-                        approve(single);
-                      }}
-                    >
-                      ✓
-                    </button>{" "}
-                    <button
-                      value={single.Content}
-                      onClick={(e) => {
-                        disapprove(e.target.value);
-                      }}
-                    >
-                      ✖
-                    </button>
-                  </div>
-                );
-              }
-            })
-          : null}
-      </div>
-      <div className="quoteCollumn">
-        {" "}
-        <h1>quote</h1>
-        {depositDisplay !== undefined
-          ? depositDisplay.map((single) => {
-              if (single.Type == "Quote") {
-                return (
-                  <div className="saintTypeContentContainer">
-                    <h1 className="saintTypeContentH1">{single.Saint}</h1>
-                    <h1 className="saintTypeContentH1">{single.Content}</h1>
-                    <button
-                      value={single}
-                      onClick={(e) => {
-                        approve(single);
-                        console.log(single);
-                      }}
-                    >
-                      ✓
-                    </button>{" "}
-                    <button
-                      value={single.Content}
-                      onClick={(e) => {
-                        disapprove(e.target.value);
-                      }}
-                    >
-                      ✖
-                    </button>
-                  </div>
-                );
-              }
-            })
-          : null}
+        Log out
+      </div>{" "}
+      <div className="allCollumnContainer">
+        <div className="workCollumn">
+          {" "}
+          <div className="worksCollumnTitleContainer">
+            <h1>Works</h1>
+          </div>{" "}
+          <div className="workArticleContainer">
+            {depositDisplay !== undefined
+              ? depositDisplay.map((single) => {
+                  if (single.Type == "Work") {
+                    return (
+                      <div className="individualArticleContainerAdmin">
+                        <h1 className="individualArticleTitle">
+                          {single.Saint} - {single.Reference}
+                        </h1>
+                        <p className="individualArticleContent">
+                          {single.Content}
+                        </p>
+                        <button
+                          className="individualApproveButton"
+                          value={single}
+                          onClick={(e) => {
+                            approve(single);
+                          }}
+                        >
+                          ✓
+                        </button>{" "}
+                        <button
+                          className="individualApproveButton"
+                          value={single.Content}
+                          onClick={(e) => {
+                            disapprove(e.target.value);
+                          }}
+                        >
+                          ✖
+                        </button>
+                      </div>
+                    );
+                  }
+                })
+              : null}
+          </div>
+        </div>
+        <div className="storyCollumn">
+          <div className="storysCollumnTitleContainer">
+            <h1>Storys</h1>
+          </div>{" "}
+          {depositDisplay !== undefined
+            ? depositDisplay.map((single) => {
+                if (single.Type == "Story") {
+                  return (
+                    <div className="individualArticleContainerAdmin">
+                      <h1 className="individualArticleTitle">
+                        {single.Saint} - {single.Reference}
+                      </h1>
+                      <p className="individualArticleContent">
+                        {single.Content}
+                      </p>
+                      <button
+                        className="individualApproveButton"
+                        value={single}
+                        onClick={(e) => {
+                          approve(single);
+                        }}
+                      >
+                        ✓
+                      </button>{" "}
+                      <button
+                        className="individualApproveButton"
+                        value={single.Content}
+                        onClick={(e) => {
+                          disapprove(e.target.value);
+                        }}
+                      >
+                        ✖
+                      </button>
+                    </div>
+                  );
+                }
+              })
+            : null}
+        </div>
+        <div className="quoteCollumn">
+          {" "}
+          <div className="quotesCollumnTitleContainer">
+            <h1>Quotes</h1>
+          </div>
+          {depositDisplay !== undefined
+            ? depositDisplay.map((single) => {
+                if (single.Type == "Quote") {
+                  return (
+                    <div className="individualArticleContainerAdmin">
+                      <h1 className="individualArticleTitle">
+                        {single.Saint} - {single.Reference}
+                      </h1>
+                      <p className="individualArticleContent">
+                        {single.Content}
+                      </p>
+                      <button
+                        className="individualApproveButton"
+                        value={single}
+                        onClick={(e) => {
+                          approve(single);
+                          console.log(single);
+                        }}
+                      >
+                        ✓
+                      </button>{" "}
+                      <button
+                        className="individualApproveButton"
+                        value={single.Content}
+                        onClick={(e) => {
+                          disapprove(e.target.value);
+                        }}
+                      >
+                        ✖
+                      </button>
+                    </div>
+                  );
+                }
+              })
+            : null}
+        </div>
       </div>
     </div>
   );
