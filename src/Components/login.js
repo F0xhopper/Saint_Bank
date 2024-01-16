@@ -14,6 +14,7 @@ const Login = (props) => {
     <div className="adminLoginContainer">
       <div className="usernameInputContainer">
         <input
+          className="usernameInput"
           value={usernameInput}
           placeholder="Username"
           onChange={(e) => {
@@ -23,7 +24,7 @@ const Login = (props) => {
       </div>
       <div className="passwordInputContainer">
         <input
-          className="Password"
+          className="passwordInput"
           value={passwordInput}
           placeholder="Password"
           onChange={(e) => {

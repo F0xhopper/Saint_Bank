@@ -3,7 +3,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
 
 code {
@@ -28,7 +28,7 @@ code {
 }
 .articleInViewContentContainer {
   width: 1120px;
-  height: 700px;
+  height: 600px;
   overflow: scroll;
 }
 
@@ -52,9 +52,14 @@ code {
 .articleInViewButton {
   margin: 10px;
   cursor: pointer;
+  color: white;
 }
 .saintDropdown {
-  height: 29px;
+  height: 34px;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  width: max-content;
 }
 .articleInViewButton:hover {
   filter: drop-shadow(1px 1px 10px #818181);
@@ -71,6 +76,7 @@ code {
 }
 .depositButton {
   cursor: pointer;
+  color: white;
 }
 .depositInsideContainer {
   margin: 50px;
@@ -89,6 +95,9 @@ code {
 .depositSaintInput {
   width: 420px;
   font-size: 18px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
 
   height: 35px;
 }
@@ -119,6 +128,9 @@ code {
 .depositSelector {
   width: max-content;
   font-size: 26px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
   font-family: "Times New Roman", Times, serif;
 }
 .depositDepositButtonContainer {
@@ -141,7 +153,10 @@ code {
 }
 .depositReferenceInput {
   width: 420px;
+  background-color: black;
+  color: white;
   height: 35px;
+  border: 1px solid white;
   font-size: 18px;
   float: left;
 }
@@ -149,8 +164,11 @@ code {
   width: 900px;
   resize: none;
   font-size: 19px;
+  border: 1px solid white;
 
   height: 550px;
+  background-color: black;
+  color: white;
 }
 .storyCollumn,
 .workCollumn,
@@ -158,6 +176,7 @@ code {
   width: 370px;
   margin: 10px;
   float: left;
+  color: white;
 }
 .individualApproveButton {
   background-color: white;
@@ -182,44 +201,60 @@ code {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: #ffffff;
 }
 
 .allCollumnContainer {
   float: left;
+
   width: 1190px;
   height: 700px;
 }
 .articleInViewDisplayArticleContainer {
   margin: 50px;
+  color: white;
+}
+.searchBarContainer {
+  margin: auto;
+  width: 700px;
 }
 .searchBar {
   float: left;
   width: 300px;
   height: 50px;
-  margin: 10px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
   width: 400px;
   height: 30px;
 }
 .depositButtonContainer {
   float: right;
-  margin: 10px;
+
   width: 100px;
 }
 .randomButtonContainer {
   float: left;
   width: 300px;
-  margin: 10px;
+  color: white;
+  margin: 20px;
 }
 .publicContainer {
   width: 1200px;
+  margin-left: 420px;
+  filter: drop-shadow(1px 1px 10px #9e9e9e);
+
   height: 850px;
 }
 .imageContainer {
   float: left;
 }
 .depositContainer {
+  margin-left: 450px;
+  color: white;
   width: 1200px;
+  filter: drop-shadow(1px 1px 10px #9e9e9e);
+
   height: 850px;
 }
 .topContainer {
@@ -246,18 +281,24 @@ code {
 }
 .titleImage {
   width: 1000px;
+  filter: drop-shadow(1px 1px 10px #9e9e9e);
 }
 .adminLoginContainer {
   float: left;
   margin: 10px;
+  border: 1px solid rgb(255, 255, 255);
+  color: white;
   width: 200px;
-  height: 120px;
+  height: 110px;
   margin-right: 300px;
 }
 .App {
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   width: 1600px;
   height: 980px;
+  background-image: url("./Images/wallpaper-thevirgin3.jpg");
+  background-size: cover;
+  filter: drop-shadow(1px 1px 10px #ffffff);
   margin: auto;
 }
 .loginButton {
@@ -265,6 +306,8 @@ code {
   width: 170px;
   margin-left: 70px;
   cursor: pointer;
+  filter: drop-shadow(1px 1px 10px #ffffff);
+
   float: left;
 }
 .loginButton:hover {
@@ -273,8 +316,16 @@ code {
 .usernameInputContainer,
 .passwordInputContainer {
   margin: 10px;
+  background-color: black;
+  color: white;
   float: left;
 }
 .image {
   width: 390px;
+  display: none;
+}
+.usernameInput,
+.passwordInput {
+  background-color: black;
+  border: 1px solid white;
 }
