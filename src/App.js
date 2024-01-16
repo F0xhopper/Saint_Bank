@@ -1,4 +1,4 @@
-import saintImage from "./Images/tumblr_nj7pdo0cWa1sknvnko2_r1_1280.jpg";
+import saintImage from "./Images//tumblr_nj7pdo0cWa1sknvnko2_r1_1280.png";
 import title from "./Images/New Project (7).png";
 import { useEffect, useState } from "react";
 import Deposit from "./Components/deposit.js";
