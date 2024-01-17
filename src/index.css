@@ -206,7 +206,9 @@ code {
 }
 
 /* Track */
-
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #ffffff;
