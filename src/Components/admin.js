@@ -51,7 +51,7 @@ const AdminFacility = (props) => {
       >
         Log out
       </div>{" "}
-      <div className="allCollumnContainer">
+      <div style={{ marginTop: "17px" }} className="allCollumnContainer">
         <div className="workCollumn">
           {" "}
           <div className="worksCollumnTitleContainer">

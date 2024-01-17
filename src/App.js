@@ -1,4 +1,3 @@
-import saintImage from "./Images//tumblr_nj7pdo0cWa1sknvnko2_r1_1280.png";
 import title from "./Images/no bg.png";
 import { useEffect, useState } from "react";
 import Deposit from "./Components/deposit.js";
@@ -19,9 +18,6 @@ function App() {
           </div>
         </div>
         <div className="bottomContainer">
-          <div className="imageContainer">
-            <img className="image" src={saintImage}></img>
-          </div>
           <div className="interactiveContainer">
             {loggedIn == true ? (
               <AdminFacility setLoggedIn={setLoggedIn} loggedIn={loggedIn} />

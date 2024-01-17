@@ -33,7 +33,7 @@ const Login = (props) => {
         ></input>
       </div>
       <div className="loginButton" onClick={login}>
-        Login
+        Login →
       </div>
     </div>
   );
