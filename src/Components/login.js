@@ -4,9 +4,9 @@ const Login = (props) => {
   const [usernameInput, setUsernameInput] = useState();
   const [passwordInput, setpasswordInput] = useState();
   function login() {
-    // if (usernameInput == "admin" && passwordInput == "admin") {
-    props.setLoggedIn(true);
-    // }
+    if (usernameInput == "admin" && passwordInput == "123") {
+      props.setLoggedIn(true);
+    }
     setUsernameInput("");
     setpasswordInput("");
   }
@@ -27,6 +27,7 @@ const Login = (props) => {
           className="passwordInput"
           value={passwordInput}
           placeholder="Password"
+          type="password"
           onChange={(e) => {
             setpasswordInput(e.target.value);
           }}

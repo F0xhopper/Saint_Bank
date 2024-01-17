@@ -166,7 +166,7 @@ code {
 }
 .depositContentInput {
   width: 1030px;
-
+  font-family: "Times New Roman", Times, serif;
   resize: none;
   font-size: 19px;
   border: 1px solid white;
@@ -341,5 +341,7 @@ code {
 .passwordInput {
   background-color: black;
   width: 190px;
+  color: white;
+
   border: 1px solid white;
 }
