@@ -312,6 +312,7 @@ code {
   background-size: cover;
   filter: drop-shadow(1px 1px 10px #ffffff);
   margin: auto;
+  margin-top: 20px;
 }
 .loginButton {
   margin: 10px;
