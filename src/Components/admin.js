@@ -143,9 +143,7 @@ const AdminFacility = (props) => {
                 if (single.Type == "Quote") {
                   return (
                     <div className="individualArticleContainerAdmin">
-                      <h1 className="individualArticleTitle">
-                        {single.Saint} - {single.Reference}
-                      </h1>
+                      <h1 className="individualArticleTitle">{single.Saint}</h1>
                       <p className="individualArticleContent">
                         {single.Content}
                       </p>
