@@ -11,11 +11,11 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-const connection = mysql.createConnection({
+const connection = await mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "password",
-  database: "soul",
+  database: "Soul Nourishment",
 });
 connection.connect();
 
