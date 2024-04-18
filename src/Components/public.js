@@ -40,45 +40,47 @@ const Public = (props) => {
       {articleInView == undefined ? (
         <div className="overallViewContainer">
           {" "}
-          <div className="randomButtonContainer">
-            <div className="randomButton" onClick={displayRandom}>
-              Surprise
+          <div className="searchContainer">
+            <div className="randomButtonContainer">
+              <div className="randomButton" onClick={displayRandom}>
+                Surprise
+              </div>
             </div>
-          </div>
-          <div className="searchBarContainer">
-            <input
-              className="searchBar"
-              placeholder="Search"
-              onChange={(e) => {
-                setSearchInput(e.target.value);
-              }}
-            ></input>{" "}
-            <select
-              className="saintDropdown"
-              onChange={(e) => {
-                if (e.target.value !== "All saint's") {
+            <div className="searchBarContainer">
+              <input
+                className="searchBar"
+                placeholder="Search"
+                onChange={(e) => {
                   setSearchInput(e.target.value);
-                } else {
-                  setSearchInput(undefined);
-                }
-              }}
-            >
-              <option>All saint's</option>
-              {saints !== undefined
-                ? saints.map((saint) => {
-                    return <option>{saint}</option>;
-                  })
-                : null}
-            </select>
-          </div>
-          <div className="depositButtonContainer">
-            <div
-              className="depositButton"
-              onClick={() => {
-                props.setDepositing(true);
-              }}
-            >
-              Deposit
+                }}
+              ></input>{" "}
+              <select
+                className="saintDropdown"
+                onChange={(e) => {
+                  if (e.target.value !== "All saint's") {
+                    setSearchInput(e.target.value);
+                  } else {
+                    setSearchInput(undefined);
+                  }
+                }}
+              >
+                <option>All saint's</option>
+                {saints !== undefined
+                  ? saints.map((saint) => {
+                      return <option>{saint}</option>;
+                    })
+                  : null}
+              </select>
+            </div>
+            <div className="depositButtonContainer">
+              <div
+                className="depositButton"
+                onClick={() => {
+                  props.setDepositing(true);
+                }}
+              >
+                Deposit
+              </div>
             </div>
           </div>
           <div className="allCollumnContainer">

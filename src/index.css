@@ -35,7 +35,7 @@ code {
 .individualArticleContainer {
   float: inline-start;
   margin: 10px;
-  width: 310px;
+  width: 90%;
   height: max-content;
   cursor: pointer;
 }
@@ -112,6 +112,9 @@ code {
   margin-bottom: 20px;
   height: 35px;
 }
+.overallViewContainer {
+  width: calc(100vw - 360px);
+}
 .depositReferenceInputContainer {
   margin: 0px;
   width: max-content;
@@ -187,10 +190,11 @@ code {
 .storyCollumn,
 .workCollumn,
 .quoteCollumn {
-  width: 370px;
+  flex: 1;
   margin: 5px;
   float: left;
   color: white;
+  margin-right: 50px;
 }
 .individualApproveButton {
   background-color: rgb(0, 0, 0);
@@ -207,8 +211,8 @@ code {
 .quoteArticleContainer,
 .storyArticleContainer {
   overflow-x: scroll;
-  width: 350px;
-  height: 630px;
+  width: 100%;
+  height: calc(100vh - 400px);
 }
 /* width */
 ::-webkit-scrollbar {
@@ -225,10 +229,8 @@ code {
 }
 
 .allCollumnContainer {
-  float: left;
-
-  width: 1190px;
-  height: 700px;
+  width: 100%;
+  display: flex;
 }
 .articleInViewDisplayArticleContainer {
   margin: 20px;
@@ -261,12 +263,18 @@ code {
   color: white;
   margin-left: 20px;
 }
+.searchContainer {
+  width: calc(100vw - 360px);
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+}
 .publicContainer {
   width: 100%;
   margin-left: 360px;
   filter: drop-shadow(1px 1px 10px #9e9e9e);
 
-  height: 100%;
+  height: max-content;
 }
 .imageContainer {
   float: left;
