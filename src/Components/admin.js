@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 /**
  * Renders an individual article component
  * @param {Object} props - The component props
@@ -57,6 +58,8 @@ const AdminFacility = (props) => {
         content: content,
       }),
     });
+    // Get new updated deposit data
+    getDeposited();
   }
 
   // Function to approve an article
@@ -79,6 +82,8 @@ const AdminFacility = (props) => {
       },
       body: JSON.stringify(approved),
     });
+    // Get new updated deposit data
+    getDeposited();
   }
 
   // Fetch deposited articles on component mount

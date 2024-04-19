@@ -1,13 +1,21 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
+/**
+ * Component for depositing articles
+ * @param {Object} props - The component props
+ * @param {Function} props.setDepositing - Function to set the depositing state
+ * @returns {JSX.Element} The Deposit component
+ */
 const Deposit = (props) => {
-  const [saintInput, setSaintInput] = useState();
+  // State variables for input fields
+  const [saintInput, setSaintInput] = useState("");
   const [typeInput, setTypeInput] = useState("Work");
-  const [referenceInput, setReferenceInput] = useState();
-  const [contentInput, setContentInput] = useState();
-  function post() {
-    let changedRefernce = null;
+  const [referenceInput, setReferenceInput] = useState("");
+  const [contentInput, setContentInput] = useState("");
 
+  // Function to handle article submission
+  const handlePost = () => {
+    // Sends article inputted to depo database
     fetch("http://localhost:3001/depo", {
       method: "post",
       headers: {
@@ -20,30 +28,30 @@ const Deposit = (props) => {
         content: contentInput,
       }),
     });
-    // props.setDepositing(false);
-    setReferenceInput("");
+
+    // Reset input fields after submission
     setSaintInput("");
+    setReferenceInput("");
     setContentInput("");
-  }
+  };
+
   return (
     <div className="depositContainer">
       <div
         className="depositBackButton"
-        onClick={() => {
-          props.setDepositing(false);
-        }}
+        onClick={() => props.setDepositing(false)}
       >
         Back
-      </div>{" "}
+      </div>
       <div className="depositSelectorContainer">
         <select
           className="depositSelector"
-          onChange={(e) => {
-            setTypeInput(e.target.value);
-          }}
+          value={typeInput}
+          onChange={(e) => setTypeInput(e.target.value)}
         >
-          <option>Work</option> <option>Quote</option>
-          <option>Story</option>
+          <option value="Work">Work</option>
+          <option value="Quote">Quote</option>
+          <option value="Story">Story</option>
         </select>
       </div>
       <div className="depositInsideContainer">
@@ -52,35 +60,29 @@ const Deposit = (props) => {
             className="depositSaintInput"
             value={saintInput}
             placeholder="Saint"
-            onChange={(e) => {
-              setSaintInput(e.target.value);
-            }}
-          ></input>
-        </div>{" "}
-        {typeInput !== "Quote" ? (
+            onChange={(e) => setSaintInput(e.target.value)}
+          />
+        </div>
+        {typeInput !== "Quote" && (
           <div className="depositReferenceInputContainer">
             <input
               className="depositReferenceInput"
               value={referenceInput}
               placeholder="Reference"
-              onChange={(e) => {
-                setReferenceInput(e.target.value);
-              }}
-            ></input>
+              onChange={(e) => setReferenceInput(e.target.value)}
+            />
           </div>
-        ) : null}{" "}
+        )}
         <div className="depositContentInputContainer">
           <textarea
             className="depositContentInput"
             value={contentInput}
             placeholder="Content"
-            onChange={(e) => {
-              setContentInput(e.target.value);
-            }}
-          ></textarea>
+            onChange={(e) => setContentInput(e.target.value)}
+          />
         </div>
         <div className="depositDepositButtonContainer">
-          <div className="depositDepositButton" onClick={post}>
+          <div className="depositDepositButton" onClick={handlePost}>
             Deposit
           </div>
         </div>
