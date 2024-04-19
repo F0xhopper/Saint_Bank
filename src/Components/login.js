@@ -14,14 +14,14 @@ const Login = (props) => {
    * Function to handle login action.
    * If username and password match, setLoggedIn is called to update login state.
    */
-  const login = () => {
+  function login() {
     if (usernameInput === "admin" && passwordInput === "123") {
       props.setLoggedIn(true);
       // Reset inputs only after successful login
       setUsernameInput("");
       setPasswordInput("");
     }
-  };
+  }
 
   return (
     <div className="adminLoginContainer">

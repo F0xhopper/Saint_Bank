@@ -1,12 +1,16 @@
 import title from "./Images/no bg.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Deposit from "./Components/deposit.js";
 import AdminFacility from "./Components/admin.js";
 import Public from "./Components/public.js";
 import Login from "./Components/login.js";
+/**
+ * Main component representing the application.
+ * @returns {JSX.Element} The rendered App component.
+ */
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [depositing, setDepositing] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);// If logged in state
+  const [depositing, setDepositing] = useState(false);// If deposting state
   return (
     <div className="App">
       <div>
